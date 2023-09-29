@@ -58,16 +58,16 @@ function Page(props: Props) {
   }
 
   // handle change of Reference field
-  function handleRefChange(e) {
+  function handleRefChange(e: any) {
     setReference(e.target.value);
   }
   // handle change of number field
-  function handleNumberChange(e) {
+  function handleNumberChange(e: any) {
     setNumber(e.target.value);
   }
 
   //   handle change of suffix field
-  function handleSuffixChange(e) {
+  function handleSuffixChange(e: any) {
     setSuffix(e.target.value);
   }
 
@@ -86,7 +86,7 @@ function Page(props: Props) {
       .catch((e) => console.log(e));
   }
 
-  const handleCtrlV = (e) => {
+  const handleCtrlV = (e: any) => {
     // check if the ctrl key and the V key are pressed
     if ((e.ctrlKey || e.metaKey) && e.key === "c") {
       // do something with the clipboard data

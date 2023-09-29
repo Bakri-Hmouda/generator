@@ -27,8 +27,8 @@ function Page(props: Props) {
   const [copied, setCopied] = useState(false);
 
   //   handle change of input field
-  function handleChange(data) {
-    const categories = data.map((item) => item.value);
+  function handleChange(data: any) {
+    const categories = data.map((item: any) => item.value);
     const stringResult = categories.join("|");
     setData(stringResult);
   }
@@ -48,7 +48,7 @@ function Page(props: Props) {
       .catch((e) => console.log(e));
   }
 
-  const handleCtrlV = (e) => {
+  const handleCtrlV = (e: any) => {
     // check if the ctrl key and the V key are pressed
     if ((e.ctrlKey || e.metaKey) && e.key === "c") {
       // do something with the clipboard data
