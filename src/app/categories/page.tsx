@@ -27,7 +27,7 @@ function Page(props: Props) {
   const [copied, setCopied] = useState(false);
 
   //   handle change of input field
-  function handleChange(data: MultiValue<option>) {
+  function handleChange(data) {
     const categories = data.map((item) => item.value);
     const stringResult = categories.join("|");
     setData(stringResult);
